@@ -7,9 +7,9 @@ const data = require('./lib/data.js');
 //module scaffolding
 const app = {};
 
-// data.create('test','newFile',{name:'sajib',Address:'Dhaka'}, (err) => {
-//     console.log('error was',err);
-// });
+data.create('test','newFile',{name:'sajib',Address:'Dhaka'}, (err) => {
+    console.log('error was',err);
+});
 
 // data.read('test','newFile', (err,result) => {
 //     console.log(err,result);
@@ -19,9 +19,9 @@ const app = {};
 //     console.log('file updated',err);
 // });
 
-data.delete('test','newFile', (err) => {
-    console.log(err);
-});
+// data.delete('test','newFile', (err) => {
+//     console.log(err);
+// });
 
 // create server
 app.createServer = ()=>{
