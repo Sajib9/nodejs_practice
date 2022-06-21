@@ -1,0 +1,15 @@
+{
+  "name": "monitoring-api",
+  "version": "1.0.0",
+  "description": "uptime monitoring api raw",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sajib ahamed",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
