@@ -89,6 +89,7 @@ handler._user.get = (requestProperties,callback) => {
                 : false;
 
     tokenHandler._token.verify(token, phone, (tokenId) => {
+        
         if(tokenId){
             data.read('users',phone, (err,u) => {
                 const user = {...parseJSON(u)};//convert to json object from string & using spread operator {...}
