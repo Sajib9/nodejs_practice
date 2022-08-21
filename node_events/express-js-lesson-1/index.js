@@ -1,7 +1,7 @@
 const express = require('express');
  const app = express();
 
- app.use(express.json());
+ app.use(express.json()); //give the access of req.body in json format
  app.use(express.raw()); //sent data as raw .content type "application/octet-stream"
  app.use(express.text()); //sent data as text .content type "text/plain"
  app.use(express.static(`${__dirname}/public/`)); //make a file accessible from any folder from anywhere from route.normally its restricted

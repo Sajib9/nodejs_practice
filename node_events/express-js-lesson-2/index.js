@@ -35,7 +35,7 @@ app.get('/user/:id', (req,res) => {
     res.send('this is home page');
 });
 
-app.route('/about/mission') //usedfor all common route
+app.route('/about/mission') //usedfor all common route but different method
     // .get((req,res)=>{
     //     //res.send('get');
     //     res.render('index');
