@@ -1,0 +1,36 @@
+const arr = [
+  {dpid:1,rtid:1,retialer_id:997222},
+  {dpid:1,rtid:20,retialer_id:2818951},
+  {dpid:1,rtid:2,retialer_id:2819015},
+  {dpid:2,rtid:12,retialer_id:2819015},
+  {dpid:2,rtid:21,retialer_id:2819015},
+  {dpid:2,rtid:32,retialer_id:2819015},
+];
+
+
+let allDepIDs = []
+// let uniqueKeys = Object.keys(Object.assign({}, ...arr));
+// console.log(uniqueKeys);
+
+arr.forEach((curObj, i, fullArr) => {
+  allDepIDs.push(curObj.dpid)
+})
+
+let unique = allDepIDs.filter((item, i, ar) => ar.indexOf(item) === i);
+
+
+const findRoutes = (depID) => {
+let allRoutes = arr.filter(curObj => curObj.dpid === depID)
+return allRoutes
+}
+
+let testResult = unique.map((cur,i) => {
+  let obj = {
+    dep_id: cur,
+    routes: findRoutes(cur)
+  }
+
+  return obj
+})
+
+console.log(testResult)
